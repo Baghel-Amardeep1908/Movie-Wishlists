@@ -45,25 +45,25 @@ const MovieSearch = () => {
         `https://omdbapi.com/?apikey=e514031d&t=${movieName}`
       );
       let movieURLResult = await movieURL.json();
-      // movieURLResult["open"] = false;
-      movieURLResult = { ...movieURLResult, opened: false, clicked: "" };
-      setMovieDetails([...movieDetails, movieURLResult]);
-      setShowPlot(false);
+      if (!movieURLResult.hasOwnProperty("Error")) {
+        movieURLResult = { ...movieURLResult, opened: false, clicked: "" };
+        setMovieDetails([...movieDetails, movieURLResult]);
+        setShowPlot(false);
+        return;
+      }
+      alert("No Movie Found");
     } catch (error) {
       console.log("Error", error);
     }
   };
-  console.log(movieDetails);
 
   const addToWishlist = (movieTitle) => {
-    console.log("movieTitle", movieTitle);
     const getUserFromStorage = JSON.parse(
       localStorage.getItem("registeredUser")
     );
     movieDetails.map((movieItem) => {
       if (movieItem.Title === movieTitle) {
         const user = getUserFromStorage.map((item) => {
-          console.log("wishilsit", item);
           item.wishlist = [...item.wishlist, movieItem];
 
           return item;
@@ -192,7 +192,7 @@ const MovieSearch = () => {
             return (
               <div key={index}>
                 {item.hasOwnProperty("Error") ? (
-                  alert("No Movies")
+                  ""
                 ) : item ? (
                   <MovieCard>
                     <img

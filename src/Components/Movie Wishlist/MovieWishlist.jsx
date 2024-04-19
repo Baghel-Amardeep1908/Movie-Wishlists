@@ -21,8 +21,6 @@ import {
   UserProfile,
   WatchListLogoLeftSideBar,
 } from "../Movie Search/movieSearchStyling";
-import { MovieWishListMainCotainer } from "./movieWishlistSlice";
-import MySvg from "../../assets/svg/MySvg.svg";
 import account_circle_black from "../../assets/svg/account_circle_black.svg";
 import more_horiz_black from "../../assets/svg/more_horiz_black.svg";
 

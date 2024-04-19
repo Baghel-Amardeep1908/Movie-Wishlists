@@ -5,7 +5,7 @@ import MovieHomePage from "../Components/Movie Home/MovieHome";
 import AddMovieToWihlist from "../Components/Movie Wishlist/MovieWishlist";
 const Routing = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/movie-wishlists/">
       <Routes>
         <Route path="/" Component={MovieHomePage} />
         <Route path="/search_movie" Component={MovieSearch} />

@@ -46,18 +46,25 @@ const MovieHomePage = () => {
   };
 
   const handleClick = () => {
-    dispatch(handleClickCreateAccount());
-    navigate("/search_movie", { state: { name: myname } });
+    if (myname && myemail) {
+      dispatch(handleClickCreateAccount());
+      navigate("/search_movie", { state: { name: myname } });
+      return;
+    }
+    alert("Name and Email can not be blank");
   };
 
   const handleLoginVerification = () => {
-    const registeredUser = JSON.parse(localStorage.getItem("registeredUser"));
-    const userVerification = registeredUser.map((item) => {
-      if (item.email === myemail) {
-        navigate("/search_movie", { state: { name: item.name } });
-      }
-    });
-    return userVerification;
+    if (myemail) {
+      const registeredUser = JSON.parse(localStorage.getItem("registeredUser"));
+      const userVerification = registeredUser.map((item) => {
+        if (item.email === myemail) {
+          navigate("/search_movie", { state: { name: item.name } });
+        }
+      });
+      return userVerification;
+    }
+    alert("Enter Registered Email Address");
   };
 
   return (
