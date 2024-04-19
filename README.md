@@ -1,12 +1,3 @@
-<!-- # React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh -->
-
 # Movie Wishlists
 
 Welcome to the Movie Wishlists project! This web application allows users to create and manage their own movie wishlists. Users can search for movies by title and add them to their wishlist for future streaming. The application provides a user-friendly interface with three main routes: Landing Page, User Dashboard, and Wishlist.
@@ -80,6 +71,12 @@ The Wishlist page displays the list of movies that the user has added to their w
 
 - The OMDb API for providing movie data.
 
+## Deployment
+
+The application is deployed and can be accessed at:
+
+- https://baghel-amardeep1908.github.io/movie-wishlists/
+
 ## Contact
 
 If you have any questions or feedback about the project, feel free to reach out to me at:
@@ -87,9 +84,3 @@ If you have any questions or feedback about the project, feel free to reach out 
 - Email: baghel.amar1908@gmail.com
 
 Thank you for checking out the Movie Wishlists project! I look forward to receiving your feedback and questions.
-
-## Deployment
-
-The application is deployed and can be accessed at:
-
-- https://github.com/Baghel-Amardeep1908/movie-wishlists.git
